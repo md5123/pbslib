@@ -41,4 +41,5 @@ pbs_install() {
     doln /usr/bin/ypkg2-gencontrol usr/bin/ypkg-gencontrol
     docp "$FILESDIR"/ypkg-initdb   usr/bin/
     docp "$FILESDIR"/db_fix.pl     usr/share/ypkg/
+    docp "$SRCDIR"/data.h          usr/include/
 }
