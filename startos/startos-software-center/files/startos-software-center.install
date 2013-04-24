@@ -6,9 +6,6 @@ mime_file="/usr/share/softwarecenter/ypk-package.xml"
 post_install() {
     gnome2_install_schema "$schemas_file"
     gnome2_install_mine   "$mime_file"
-    gnome2_mime_database_update
-    gnome2_desktop_database_update
-    gnome2_gconfd_reload
 }
 
 pre_remove() {
@@ -17,9 +14,7 @@ pre_remove() {
 }
 
 post_remove() {
-    gnome2_mime_database_update
-    gnome2_desktop_database_update
-    gnome2_gconfd_reload
+    true
 }
 
 post_upgrade() {
